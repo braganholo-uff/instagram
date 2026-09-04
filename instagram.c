@@ -43,8 +43,8 @@ void insere_aresta(TGrafo *g, char *nome_origem, char *nome_destino) {
     if (pv1 != NULL && pv2 != NULL) {
         TVizinho *vizinho = (TVizinho *) malloc(sizeof(TVizinho));
         strcpy(vizinho->nome, nome_destino);
-        vizinho->prox = pv1->vizinho;
-        pv1->vizinho = vizinho;
+        vizinho->prox = pv1->prim_vizinho;
+        pv1->prim_vizinho = vizinho;
     }
 }
 
