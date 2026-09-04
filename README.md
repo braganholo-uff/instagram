@@ -80,5 +80,3 @@ Note a linha em branco após a impressão dos que seguem apenas pessoas mais vel
 #### Dicas Importantes:
 
 - A entrada e a saída já são tratadas no arquivo fornecido para ler e imprimir os dados no formato esperado pela questão. Vocês devem APENAS implementar a função solicitada no problema
-- Não use arquivos .h (coloque todas as definições de tipo no arquivo .c)
-- Veja outras dicas em http://www.ic.uff.br/~vanessa/courses/runcodes.html
