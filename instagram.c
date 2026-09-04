@@ -38,11 +38,14 @@ TVizinho *busca_vizinho(TVizinho *vizinho, char *nome) {
 }
 
 void insere_aresta(TGrafo *g, char *nome_origem, char *nome_destino) {
-    TGrafo *vertice = busca_vertice(g, nome_origem);
-    TVizinho *vizinho = (TVizinho *) malloc(sizeof(TVizinho));
-    strcpy(vizinho->nome, nome_destino);
-    vizinho->prox = vertice->prim_vizinho;
-    vertice->prim_vizinho = vizinho;
+    TGrafo *pv1 = busca_vertice(g, nome_origem);
+    TGrafo *pv2 = busca_vertice(g, nome_destino);
+    if (pv1 != NULL && pv2 != NULL) {
+        TVizinho *vizinho = (TVizinho *) malloc(sizeof(TVizinho));
+        strcpy(vizinho->nome, nome_destino);
+        vizinho->prox = pv1->vizinho;
+        pv1->vizinho = vizinho;
+    }
 }
 
 void imprime(TGrafo *vertice) {
